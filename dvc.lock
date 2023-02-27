@@ -1,0 +1,21 @@
+schema: '2.0'
+stages:
+  complete-ubermedia:
+    cmd: dz run-step ubermedia complete
+    deps:
+    - path: data/gpsping/ubermedia/complete/extended_ping
+      md5: c85c45c2d43e5ef7d54642107c89536e.dir
+      size: 74840159695
+      nfiles: 6144
+    - path: src/ubermedia.py
+      md5: 7cf3dc2daecec3189912380bb396fc40
+      size: 2581
+    params:
+      zimmer.yaml:
+        envs.complete.params.ubermedia.min_count: 3
+        envs.complete.params.ubermedia.min_duration: 15
+    outs:
+    - path: data/mobility-pattern-data/ubermedia/complete/hash_hour
+      md5: 60148001705a17e67d590a397fc6309a.dir
+      size: 311818792
+      nfiles: 24

@@ -1,2 +1,16 @@
 name: mobility-pattern-data
 version: v0.0
+imported_projects:
+  gpsping:
+    version: "==0.4"
+  mobility:
+    version: "==0.5"
+envs:
+  complete:
+    import_envs:
+      gpsping: complete
+      mobility: complete
+    params:
+      ubermedia:
+        min_count: 3
+        min_duration: 15

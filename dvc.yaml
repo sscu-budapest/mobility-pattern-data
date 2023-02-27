@@ -1,0 +1,12 @@
+stages:
+  complete-ubermedia:
+    cmd: dz run-step ubermedia complete
+    deps:
+    - data/gpsping/ubermedia/complete/extended_ping
+    - src/ubermedia.py
+    params:
+    - zimmer.yaml:
+      - envs.complete.params.ubermedia.min_count
+      - envs.complete.params.ubermedia.min_duration
+    outs:
+    - data/mobility-pattern-data/ubermedia/complete/hash_hour
