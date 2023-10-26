@@ -1,1 +1,3 @@
 datazimmer
+geopandas
+h3pandas
